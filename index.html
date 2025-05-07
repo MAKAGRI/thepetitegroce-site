@@ -2,69 +2,162 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>The Petite Grocer, LLC</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      font-family: Arial, sans-serif;
+    * {
       margin: 0;
       padding: 0;
-      background: #f4f4f4;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f7f7f7;
       color: #333;
-      line-height: 1.6;
-      overflow-y: scroll;
     }
+
     header {
-      background: #4CAF50;
+      background: url('https://images.unsplash.com/photo-1590080876590-5f4e4f71e262?auto=format&fit=crop&w=1950&q=80') center/cover no-repeat;
       color: white;
-      padding: 20px;
+      padding: 120px 30px;
       text-align: center;
     }
-    .container {
-      max-width: 800px;
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    header p {
+      font-size: 22px;
+    }
+
+    nav {
+      background-color: #333;
+      padding: 15px;
+      text-align: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 20px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    section {
+      padding: 60px 30px;
+      max-width: 1100px;
       margin: auto;
+    }
+
+    section h2 {
+      font-size: 32px;
+      margin-bottom: 20px;
+    }
+
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .service-box {
+      background-color: #fff;
       padding: 20px;
-      background: white;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
-    h1 {
-      margin-top: 0;
+
+    .contact p {
+      margin: 10px 0;
+      font-size: 18px;
     }
-    .info {
-      margin: 15px 0;
-    }
-    .footer {
-      text-align: center;
+
+    iframe {
+      border: 0;
+      border-radius: 8px;
+      width: 100%;
+      height: 350px;
       margin-top: 30px;
-      padding: 10px;
-      background: #ddd;
     }
+
+    footer {
+      background-color: #333;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 60px;
+    }
+
     a {
       color: #4CAF50;
     }
   </style>
 </head>
 <body>
+
   <header>
     <h1>The Petite Grocer, LLC</h1>
-    <p>Grocery with a Personal Touch</p>
+    <p>Specialty Grocery & Local Delights in Carlsbad, California</p>
   </header>
 
-  <div class="container">
-    <div class="info"><strong>Company Number:</strong> 202463510912</div>
-    <div class="info"><strong>Status:</strong> Active</div>
-    <div class="info"><strong>Incorporation Date:</strong> 17 August 2024</div>
-    <div class="info"><strong>Company Type:</strong> Limited Liability Company - CA</div>
-    <div class="info"><strong>Jurisdiction:</strong> California (US)</div>
-    <div class="info"><strong>Registered Address:</strong><br>7020 Wildrose Terrace<br>Carlsbad, CA 92011<br>United States</div>
-    <div class="info"><strong>Agent Name:</strong> Ann-Marie Knox</div>
-    <div class="info"><strong>Email:</strong> <a href="mailto:knox@thepetitegrocer.shop">knox@thepetitegrocer.shop</a></div>
-    <div class="info"><strong>Phone:</strong> <a href="tel:+17207308591">+1 (720) 730-8591</a></div>
-    <div class="info"><strong>Officers:</strong> Ann-Marie Knox (Agent), The Petite Grocer Corp (Manager)</div>
-  </div>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <div class="footer">
-    &copy; 2025 The Petite Grocer, LLC. All rights reserved.
-  </div>
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Founded in August 2024, The Petite Grocer, LLC is a California-based boutique grocery company offering specialty products and curated local goods. Our mission is to provide top-quality groceries with a personal touch. We operate under the leadership of Ann-Marie Knox and The Petite Grocer Corp.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Offerings</h2>
+    <div class="services-grid">
+      <div class="service-box">
+        <h3>🥖 Artisan Foods</h3>
+        <p>Hand-picked gourmet items and local artisan products.</p>
+      </div>
+      <div class="service-box">
+        <h3>🧺 Curated Grocery Baskets</h3>
+        <p>Perfect gift sets with organic, handmade, and specialty foods.</p>
+      </div>
+      <div class="service-box">
+        <h3>🚚 Local Delivery</h3>
+        <p>Same-day grocery delivery within Carlsbad and surrounding areas.</p>
+      </div>
+      <div class="service-box">
+        <h3>📦 Subscription Boxes</h3>
+        <p>Monthly surprise boxes filled with seasonal delights and local favorites.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact">
+    <h2>Contact Us</h2>
+    <p><strong>Address:</strong> 7020 Wildrose Terrace, Carlsbad, CA 92011, USA</p>
+    <p><strong>Email:</strong> <a href="mailto:knox@thepetitegrocer.shop">knox@thepetitegrocer.shop</a></p>
+    <p><strong>Phone:</strong> <a href="tel:+17207308591">(720) 730-8591</a></p>
+
+    <iframe
+      src="https://www.google.com/maps?q=7020+Wildrose+Terrace,+Carlsbad,+CA+92011&output=embed"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 The Petite Grocer, LLC. Designed with care in California.</p>
+  </footer>
+
 </body>
 </html>
